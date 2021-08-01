@@ -1,0 +1,16 @@
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\bin\Debug\netcoreapp3.1\CryptographyAlgorithms.exe
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\bin\Debug\netcoreapp3.1\CryptographyAlgorithms.deps.json
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\bin\Debug\netcoreapp3.1\CryptographyAlgorithms.runtimeconfig.json
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\bin\Debug\netcoreapp3.1\CryptographyAlgorithms.runtimeconfig.dev.json
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\bin\Debug\netcoreapp3.1\CryptographyAlgorithms.dll
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\bin\Debug\netcoreapp3.1\CryptographyAlgorithms.pdb
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.Form1.resources
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.Forms.DES_Form.resources
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.csproj.GenerateResource.cache
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.AssemblyInfoInputs.cache
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.AssemblyInfo.cs
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.dll
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.pdb
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.genruntimeconfig.cache
