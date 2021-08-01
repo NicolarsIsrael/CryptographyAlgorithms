@@ -23,5 +23,11 @@ namespace CryptographyAlgorithms
             DES_Form desForm = new DES_Form();
             desForm.Show();
         }
+
+        private void btn_AES_Cryptography_Click(object sender, EventArgs e)
+        {
+            AES_Form aesForm = new AES_Form();
+            aesForm.Show();
+        }
     }
 }

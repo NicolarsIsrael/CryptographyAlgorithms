@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CryptographyAlgorithms.Algorithms
 {
+	// uses ELECTRONIC CODEBLOCK (ECB)
 	public class DES_Cryptography
 	{
 		public const int ENCRYPT = 1;

@@ -45,6 +45,7 @@
             this.txt_Decrpyt_CipherText = new System.Windows.Forms.TextBox();
             this.lbl_Decrypt_CipherText = new System.Windows.Forms.Label();
             this.grp_Box_Decryption = new System.Windows.Forms.GroupBox();
+            this.lbl_des_cryptography = new System.Windows.Forms.Label();
             this.grpBox_DES_Encryption.SuspendLayout();
             this.grp_Box_Decryption.SuspendLayout();
             this.SuspendLayout();
@@ -214,11 +215,21 @@
             this.grp_Box_Decryption.TabStop = false;
             this.grp_Box_Decryption.Text = "Decryption";
             // 
+            // lbl_des_cryptography
+            // 
+            this.lbl_des_cryptography.AutoSize = true;
+            this.lbl_des_cryptography.Location = new System.Drawing.Point(155, 9);
+            this.lbl_des_cryptography.Name = "lbl_des_cryptography";
+            this.lbl_des_cryptography.Size = new System.Drawing.Size(119, 15);
+            this.lbl_des_cryptography.TabIndex = 1;
+            this.lbl_des_cryptography.Text = "DES CRYPTOGRAPHY";
+            // 
             // DES_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_des_cryptography);
             this.Controls.Add(this.grp_Box_Decryption);
             this.Controls.Add(this.grpBox_DES_Encryption);
             this.Name = "DES_Form";
@@ -228,6 +239,7 @@
             this.grp_Box_Decryption.ResumeLayout(false);
             this.grp_Box_Decryption.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -250,5 +262,6 @@
         private System.Windows.Forms.TextBox txt_Decrpyt_CipherText;
         private System.Windows.Forms.Label lbl_Decrypt_CipherText;
         private System.Windows.Forms.GroupBox grp_Box_Decryption;
+        private System.Windows.Forms.Label lbl_des_cryptography;
     }
 }

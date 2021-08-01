@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btn_DesCryptography = new System.Windows.Forms.Button();
+            this.btn_AES_Cryptography = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,11 +52,22 @@
             this.btn_DesCryptography.UseVisualStyleBackColor = true;
             this.btn_DesCryptography.Click += new System.EventHandler(this.btn_DesCryptography_Click);
             // 
+            // btn_AES_Cryptography
+            // 
+            this.btn_AES_Cryptography.Location = new System.Drawing.Point(266, 101);
+            this.btn_AES_Cryptography.Name = "btn_AES_Cryptography";
+            this.btn_AES_Cryptography.Size = new System.Drawing.Size(241, 23);
+            this.btn_AES_Cryptography.TabIndex = 2;
+            this.btn_AES_Cryptography.Text = "AES Cryptography";
+            this.btn_AES_Cryptography.UseVisualStyleBackColor = true;
+            this.btn_AES_Cryptography.Click += new System.EventHandler(this.btn_AES_Cryptography_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_AES_Cryptography);
             this.Controls.Add(this.btn_DesCryptography);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_DesCryptography;
+        private System.Windows.Forms.Button btn_AES_Cryptography;
     }
 }
 

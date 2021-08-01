@@ -17,6 +17,8 @@ namespace CryptographyAlgorithms.Forms
         {
             InitializeComponent();
             generalFunction = new GeneralFunction();
+            this.lbl_des_cryptography.Font = new Font("Arial", 20, FontStyle.Regular);
+            this.lbl_des_cryptography.Location = new Point(250, 5);
         }
 
         private void btn_Encrypt_Click(object sender, EventArgs e)
