@@ -21,40 +21,40 @@ namespace CryptographyAlgorithms.Forms
             this.lbl_des_cryptography.Location = new Point(250, 5);
         }
 
-        //private void btn_Encrypt_Click(object sender, EventArgs e)
-        //{
-        //    var desCryptography = new DES_Cryptography();
-        //    string plainText = this.txt_Encryp_PlainText.Text.ToString();
-        //    string key = this.txt_Encryp_Key.Text.ToString();
+        private void btn_Encrypt_Click(object sender, EventArgs e)
+        {
+            var desCryptography = new DES_Cryptography();
+            string plainText = this.txt_Encryp_PlainText.Text.ToString();
+            string key = this.txt_Encryp_Key.Text.ToString();
 
-        //    if (!generalFunction.ValidateHexadecimal(plainText) || plainText.Length != 16)
-        //    {
-        //        MessageBox.Show("Enter a valid 16 bit hexadecimal value for plain text","Plain text validation");
-        //        return;
-        //    }
-        //    if (!generalFunction.ValidateHexadecimal(key) || key.Length != 16)
-        //    {
-        //        MessageBox.Show("Enter a valid 16 bit hexadecimal value for key","Key validation");
-        //        return;
-        //    }
+            if (!generalFunction.ValidateHexadecimal(plainText) || plainText.Length != 16)
+            {
+                MessageBox.Show("Enter a valid 16 bit hexadecimal value for plain text", "Plain text validation");
+                return;
+            }
+            if (!generalFunction.ValidateHexadecimal(key) || key.Length != 16)
+            {
+                MessageBox.Show("Enter a valid 16 bit hexadecimal value for key", "Key validation");
+                return;
+            }
 
-        //    byte[] textAsByte = generalFunction.StringToByteArray(plainText);
-        //    byte[] keyAsByte = generalFunction.StringToByteArray(key);
-        //    byte[] output = new byte[8];
-        //    byte[,] schedule = new byte[16, 6];
+            byte[] textAsByte = generalFunction.StringToByteArray(plainText);
+            byte[] keyAsByte = generalFunction.StringToByteArray(key);
+            byte[] output = new byte[8];
+            byte[,] schedule = new byte[16, 6];
 
-        //    desCryptography.KeySchedule(keyAsByte, schedule, DES_Cryptography.ENCRYPT);
-        //    var cipherTextByte = desCryptography.Crypt(textAsByte, output, generalFunction.ToJaggedArray(schedule));
-        //    string cipherText = generalFunction.ByteArrayToString(cipherTextByte);
-        //    this.txt_Encryp_CipherText.Text = cipherText;
+            desCryptography.KeySchedule(keyAsByte, schedule, DES_Cryptography.ENCRYPT);
+            var cipherTextByte = desCryptography.Crypt(textAsByte, output, generalFunction.ToJaggedArray(schedule));
+            string cipherText = generalFunction.ByteArrayToString(cipherTextByte);
+            this.txt_Encryp_CipherText.Text = cipherText;
 
-        //    //desCryptography.KeySchedule(keyAsByte, schedule, DES_Cryptography.DECRYPT);
-        //    //desCryptography.Crypt(output, textAsByte, generalFunction.ToJaggedArray(schedule));
-        //    //Console.Write("Decrypt Output: ");
-        //    //string cipherText = generalFunction.ByteArrayToString(textAsByte);
+            //desCryptography.KeySchedule(keyAsByte, schedule, DES_Cryptography.DECRYPT);
+            //desCryptography.Crypt(output, textAsByte, generalFunction.ToJaggedArray(schedule));
+            //Console.Write("Decrypt Output: ");
+            //string cipherText = generalFunction.ByteArrayToString(textAsByte);
 
-        //    //this.txt_cipherText.Text = cipherText;
-        //}
+            //this.txt_cipherText.Text = cipherText;
+        }
 
         private void txt_Encryp_PlainText_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -122,71 +122,5 @@ namespace CryptographyAlgorithms.Forms
             txt_Decrypt_key.SelectionLength = 0;
         }
 
-        private void btn_Encrypt_Click(object sender, EventArgs e)
-        {
-            var desCryptography = new DES_Cryptography();
-            string plainText = this.txt_Encryp_PlainText.Text.ToString();
-            string key = this.txt_Encryp_Key.Text.ToString();
-
-            //if (!generalFunction.ValidateHexadecimal(plainText) || plainText.Length != 16)
-            //{
-            //    MessageBox.Show("Enter a valid 16 bit hexadecimal value for plain text", "Plain text validation");
-            //    return;
-            //}
-            //if (!generalFunction.ValidateHexadecimal(key) || key.Length != 16)
-            //{
-            //    MessageBox.Show("Enter a valid 16 bit hexadecimal value for key", "Key validation");
-            //    return;
-            //}
-
-            byte[] textAsByte = generalFunction.StringToByteArray(plainText);
-            byte[] keyAsByte = generalFunction.StringToByteArray(key);
-
-            byte[] k1 = new byte[8];
-            byte[] k2 = new byte[8];
-            byte[] k3 = new byte[8];
-            for (int i = 0; i < 8; i++)
-            {
-                k1[i] = keyAsByte[i];
-            }
-            for (int i = 8, j=0; i < 16; i++,j++)
-            {
-                k2[j] = keyAsByte[i];
-            }
-            for (int i = 16,j=0; i < 24; i++,j++)
-            {
-                k3[j] = keyAsByte[i];
-            }
-
-
-
-            byte[] output = new byte[8];
-            byte[,] schedule = new byte[16, 6];
-
-            desCryptography.KeySchedule(k1, schedule, DES_Cryptography.ENCRYPT);
-            var cipherTextByte = desCryptography.Crypt(textAsByte, output, generalFunction.ToJaggedArray(schedule));
-
-            output = new byte[8];
-            schedule = new byte[16, 6];
-
-            desCryptography.KeySchedule(k2, schedule, DES_Cryptography.DECRYPT);
-            cipherTextByte = desCryptography.Crypt(cipherTextByte, output, generalFunction.ToJaggedArray(schedule));
-
-            output = new byte[8];
-            schedule = new byte[16, 6];
-
-            desCryptography.KeySchedule(k3, schedule, DES_Cryptography.ENCRYPT);
-            cipherTextByte = desCryptography.Crypt(cipherTextByte, output, generalFunction.ToJaggedArray(schedule));
-
-            string cipherText = generalFunction.ByteArrayToString(cipherTextByte);
-            this.txt_Encryp_CipherText.Text = cipherText;
-
-            //desCryptography.KeySchedule(keyAsByte, schedule, DES_Cryptography.DECRYPT);
-            //desCryptography.Crypt(output, textAsByte, generalFunction.ToJaggedArray(schedule));
-            //Console.Write("Decrypt Output: ");
-            //string cipherText = generalFunction.ByteArrayToString(textAsByte);
-
-            //this.txt_cipherText.Text = cipherText;
-        }
     }
 }

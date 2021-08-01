@@ -29,5 +29,11 @@ namespace CryptographyAlgorithms
             AES_Form aesForm = new AES_Form();
             aesForm.Show();
         }
+
+        private void btn_TrippleDES_Click(object sender, EventArgs e)
+        {
+            TrippleDES_Form trippleDesForm = new TrippleDES_Form();
+            trippleDesForm.Show();
+        }
     }
 }
