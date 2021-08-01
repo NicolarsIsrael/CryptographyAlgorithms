@@ -27,7 +27,7 @@ namespace CryptographyAlgorithms.Forms
 
             if (!generalFunction.ValidateHexadecimal(plainText) || plainText.Length != 16)
             {
-                MessageBox.Show("Enter a valid 16 bit hexadecimal value for plaintext","Plain text validation");
+                MessageBox.Show("Enter a valid 16 bit hexadecimal value for plain text","Plain text validation");
                 return;
             }
             if (!generalFunction.ValidateHexadecimal(key) || key.Length != 16)
@@ -76,6 +76,48 @@ namespace CryptographyAlgorithms.Forms
             txt_Encryp_Key.Text = txt_Encryp_Key.Text.ToUpper();
             txt_Encryp_Key.SelectionStart = txt_Encryp_Key.Text.Length;
             txt_Encryp_Key.SelectionLength = 0;
+        }
+
+        private void btn_Decrypt_Click(object sender, EventArgs e)
+        {
+            var desCryptography = new DES_Cryptography();
+            string cipherText = this.txt_Decrpyt_CipherText.Text.ToString();
+            string key = this.txt_Decrypt_key.Text.ToString();
+
+            if (!generalFunction.ValidateHexadecimal(cipherText) || cipherText.Length != 16)
+            {
+                MessageBox.Show("Enter a valid 16 bit hexadecimal value for cipher text", "Cipher text validation");
+                return;
+            }
+            if (!generalFunction.ValidateHexadecimal(key) || key.Length != 16)
+            {
+                MessageBox.Show("Enter a valid 16 bit hexadecimal value for key", "Key validation");
+                return;
+            }
+
+            byte[] textAsByte = generalFunction.StringToByteArray(cipherText);
+            byte[] keyAsByte = generalFunction.StringToByteArray(key);
+            byte[] output = new byte[8];
+            byte[,] schedule = new byte[16, 6];
+
+            desCryptography.KeySchedule(keyAsByte, schedule, DES_Cryptography.DECRYPT);
+            var originalTextByte = desCryptography.Crypt(textAsByte,output, generalFunction.ToJaggedArray(schedule));
+            string originalText = generalFunction.ByteArrayToString(originalTextByte);
+            this.txt_Decrypt_OriginalText.Text = originalText;
+        }
+
+        private void txt_Decrpyt_CipherText_TextChanged(object sender, EventArgs e)
+        {
+            txt_Decrpyt_CipherText.Text = txt_Decrpyt_CipherText.Text.ToUpper();
+            txt_Decrpyt_CipherText.SelectionStart = txt_Decrpyt_CipherText.Text.Length;
+            txt_Decrpyt_CipherText.SelectionLength = 0;
+        }
+
+        private void txt_Decrypt_key_TextChanged(object sender, EventArgs e)
+        {
+            txt_Decrypt_key.Text = txt_Decrypt_key.Text.ToUpper();
+            txt_Decrypt_key.SelectionStart = txt_Decrypt_key.Text.Length;
+            txt_Decrypt_key.SelectionLength = 0;
         }
     }
 }
