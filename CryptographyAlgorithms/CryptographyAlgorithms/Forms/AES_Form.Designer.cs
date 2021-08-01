@@ -44,7 +44,7 @@
             this.lbl_Encrypt_PlainText = new System.Windows.Forms.Label();
             this.grp_Box_Decrypt = new System.Windows.Forms.GroupBox();
             this.grp_box_Encrypt = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_AES_Cryptography = new System.Windows.Forms.Label();
             this.grp_Box_Decrypt.SuspendLayout();
             this.grp_box_Encrypt.SuspendLayout();
             this.SuspendLayout();
@@ -203,21 +203,21 @@
             this.grp_box_Encrypt.TabStop = false;
             this.grp_box_Encrypt.Text = "Encryption";
             // 
-            // label7
+            // lbl_AES_Cryptography
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(341, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 15);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "AES CRYPTOGRAPH";
+            this.lbl_AES_Cryptography.AutoSize = true;
+            this.lbl_AES_Cryptography.Location = new System.Drawing.Point(341, 21);
+            this.lbl_AES_Cryptography.Name = "lbl_AES_Cryptography";
+            this.lbl_AES_Cryptography.Size = new System.Drawing.Size(112, 15);
+            this.lbl_AES_Cryptography.TabIndex = 7;
+            this.lbl_AES_Cryptography.Text = "AES CRYPTOGRAPH";
             // 
             // AES_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbl_AES_Cryptography);
             this.Controls.Add(this.grp_box_Encrypt);
             this.Controls.Add(this.grp_Box_Decrypt);
             this.Name = "AES_Form";
@@ -249,6 +249,6 @@
         private System.Windows.Forms.Label lbl_Encrypt_PlainText;
         private System.Windows.Forms.GroupBox grp_Box_Decrypt;
         private System.Windows.Forms.GroupBox grp_box_Encrypt;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_AES_Cryptography;
     }
 }

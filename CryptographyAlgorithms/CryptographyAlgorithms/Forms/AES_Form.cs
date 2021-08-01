@@ -21,6 +21,8 @@ namespace CryptographyAlgorithms.Forms
             _aesDecryptionAlgorithm = new AES_DecryptionAlgorithm();
             _aesEncryptionAlgorithm = new AES_EncryptionAlgorithm();
             _generalFunction = new GeneralFunction();
+            this.lbl_AES_Cryptography.Font = new Font("Arial", 20, FontStyle.Regular);
+            this.lbl_AES_Cryptography.Location = new Point(250, 5);
         }
 
 

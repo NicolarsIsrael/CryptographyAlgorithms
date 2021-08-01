@@ -118,6 +118,7 @@
             this.btn_Decrypt.TabIndex = 6;
             this.btn_Decrypt.Text = "Decrypt";
             this.btn_Decrypt.UseVisualStyleBackColor = true;
+            this.btn_Decrypt.Click += new System.EventHandler(this.btn_Decrypt_Click);
             // 
             // txt_Decrypt_OriginalText
             // 
@@ -142,6 +143,7 @@
             this.txt_Decrypt_Key.Name = "txt_Decrypt_Key";
             this.txt_Decrypt_Key.Size = new System.Drawing.Size(262, 23);
             this.txt_Decrypt_Key.TabIndex = 3;
+            this.txt_Decrypt_Key.TextChanged += new System.EventHandler(this.txt_Decrypt_Key_TextChanged);
             // 
             // lbl_Decrypt_Key
             // 
@@ -158,6 +160,7 @@
             this.txt_Decrypt_CipherText.Name = "txt_Decrypt_CipherText";
             this.txt_Decrypt_CipherText.Size = new System.Drawing.Size(262, 23);
             this.txt_Decrypt_CipherText.TabIndex = 1;
+            this.txt_Decrypt_CipherText.TextChanged += new System.EventHandler(this.txt_Decrypt_CipherText_TextChanged);
             // 
             // lbl_Decrypt_CipherText
             // 
