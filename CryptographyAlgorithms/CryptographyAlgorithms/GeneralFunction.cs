@@ -69,5 +69,10 @@ namespace Cryptography.Algorithms
 
             return jaggedArray;
         }
+
+        public bool ValidateHexadecimal(string hex)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(hex, @"\A\b[0-9a-fA-F]+\b\Z");
+        }
     }
 }

@@ -25,11 +25,19 @@ namespace CryptographyAlgorithms.Forms
             string plainText = this.txt_Encryp_PlainText.Text.ToString();
             string key = this.txt_Encryp_Key.Text.ToString();
 
+            if (!generalFunction.ValidateHexadecimal(plainText) || plainText.Length != 16)
+            {
+                MessageBox.Show("Enter a valid 16 bit hexadecimal value for plaintext","Plain text validation");
+                return;
+            }
+            if (!generalFunction.ValidateHexadecimal(key) || key.Length != 16)
+            {
+                MessageBox.Show("Enter a valid 16 bit hexadecimal value for key","Key validation");
+                return;
+            }
+
             byte[] textAsByte = generalFunction.StringToByteArray(plainText);
             byte[] keyAsByte = generalFunction.StringToByteArray(key);
-
-            //byte[] text = { 0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xE7 };
-            //byte[] key = { 0x01, 0x23, 0x45, 0x67, 0x89, 0xAB, 0xCD, 0xEF };
             byte[] output = new byte[8];
             byte[,] schedule = new byte[16, 6];
 
@@ -44,6 +52,30 @@ namespace CryptographyAlgorithms.Forms
             //string cipherText = generalFunction.ByteArrayToString(textAsByte);
 
             //this.txt_cipherText.Text = cipherText;
+        }
+
+        private void txt_Encryp_PlainText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txt_Encryp_PlainText_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void txt_Encryp_PlainText_TextChanged(object sender, EventArgs e)
+        {
+            txt_Encryp_PlainText.Text = txt_Encryp_PlainText.Text.ToUpper();
+            txt_Encryp_PlainText.SelectionStart = txt_Encryp_PlainText.Text.Length;
+            txt_Encryp_PlainText.SelectionLength = 0;
+        }
+
+        private void txt_Encryp_Key_TextChanged(object sender, EventArgs e)
+        {
+            txt_Encryp_Key.Text = txt_Encryp_Key.Text.ToUpper();
+            txt_Encryp_Key.SelectionStart = txt_Encryp_Key.Text.Length;
+            txt_Encryp_Key.SelectionLength = 0;
         }
     }
 }

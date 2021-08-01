@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.grpBox_DES_Encryption = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbl_Encryption_PlainText = new System.Windows.Forms.Label();
-            this.txt_Encryp_PlainText = new System.Windows.Forms.TextBox();
-            this.lbl_Encryp_Key = new System.Windows.Forms.Label();
-            this.txt_Encryp_Key = new System.Windows.Forms.TextBox();
-            this.lbl_Encryp_CipherText = new System.Windows.Forms.Label();
-            this.txt_Encryp_CipherText = new System.Windows.Forms.TextBox();
             this.btn_Encrypt = new System.Windows.Forms.Button();
+            this.txt_Encryp_CipherText = new System.Windows.Forms.TextBox();
+            this.lbl_Encryp_CipherText = new System.Windows.Forms.Label();
+            this.txt_Encryp_Key = new System.Windows.Forms.TextBox();
+            this.lbl_Encryp_Key = new System.Windows.Forms.Label();
+            this.txt_Encryp_PlainText = new System.Windows.Forms.TextBox();
+            this.lbl_Encryption_PlainText = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.grpBox_DES_Encryption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,46 +56,23 @@
             this.grpBox_DES_Encryption.TabStop = false;
             this.grpBox_DES_Encryption.Text = "Encryption";
             // 
-            // label2
+            // btn_Encrypt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.btn_Encrypt.Location = new System.Drawing.Point(23, 285);
+            this.btn_Encrypt.Name = "btn_Encrypt";
+            this.btn_Encrypt.Size = new System.Drawing.Size(75, 23);
+            this.btn_Encrypt.TabIndex = 6;
+            this.btn_Encrypt.Text = "Encrypt";
+            this.btn_Encrypt.UseVisualStyleBackColor = true;
+            this.btn_Encrypt.Click += new System.EventHandler(this.btn_Encrypt_Click);
             // 
-            // lbl_Encryption_PlainText
+            // txt_Encryp_CipherText
             // 
-            this.lbl_Encryption_PlainText.AutoSize = true;
-            this.lbl_Encryption_PlainText.Location = new System.Drawing.Point(23, 33);
-            this.lbl_Encryption_PlainText.Name = "lbl_Encryption_PlainText";
-            this.lbl_Encryption_PlainText.Size = new System.Drawing.Size(171, 15);
-            this.lbl_Encryption_PlainText.TabIndex = 0;
-            this.lbl_Encryption_PlainText.Text = "Plain text (16 bit Hexadecimal )";
-            // 
-            // txt_Encryp_PlainText
-            // 
-            this.txt_Encryp_PlainText.Location = new System.Drawing.Point(23, 51);
-            this.txt_Encryp_PlainText.Name = "txt_Encryp_PlainText";
-            this.txt_Encryp_PlainText.Size = new System.Drawing.Size(262, 23);
-            this.txt_Encryp_PlainText.TabIndex = 1;
-            // 
-            // lbl_Encryp_Key
-            // 
-            this.lbl_Encryp_Key.AutoSize = true;
-            this.lbl_Encryp_Key.Location = new System.Drawing.Point(23, 123);
-            this.lbl_Encryp_Key.Name = "lbl_Encryp_Key";
-            this.lbl_Encryp_Key.Size = new System.Drawing.Size(144, 15);
-            this.lbl_Encryp_Key.TabIndex = 2;
-            this.lbl_Encryp_Key.Text = "Key ( 16 bit Hexadecimal )";
-            // 
-            // txt_Encryp_Key
-            // 
-            this.txt_Encryp_Key.Location = new System.Drawing.Point(23, 141);
-            this.txt_Encryp_Key.Name = "txt_Encryp_Key";
-            this.txt_Encryp_Key.Size = new System.Drawing.Size(262, 23);
-            this.txt_Encryp_Key.TabIndex = 3;
+            this.txt_Encryp_CipherText.Location = new System.Drawing.Point(23, 230);
+            this.txt_Encryp_CipherText.Name = "txt_Encryp_CipherText";
+            this.txt_Encryp_CipherText.ReadOnly = true;
+            this.txt_Encryp_CipherText.Size = new System.Drawing.Size(262, 23);
+            this.txt_Encryp_CipherText.TabIndex = 5;
             // 
             // lbl_Encryp_CipherText
             // 
@@ -106,23 +83,50 @@
             this.lbl_Encryp_CipherText.TabIndex = 4;
             this.lbl_Encryp_CipherText.Text = "Cipher text";
             // 
-            // txt_Encryp_CipherText
+            // txt_Encryp_Key
             // 
-            this.txt_Encryp_CipherText.Location = new System.Drawing.Point(23, 230);
-            this.txt_Encryp_CipherText.Name = "txt_Encryp_CipherText";
-            this.txt_Encryp_CipherText.ReadOnly = true;
-            this.txt_Encryp_CipherText.Size = new System.Drawing.Size(262, 23);
-            this.txt_Encryp_CipherText.TabIndex = 5;
+            this.txt_Encryp_Key.Location = new System.Drawing.Point(23, 141);
+            this.txt_Encryp_Key.Name = "txt_Encryp_Key";
+            this.txt_Encryp_Key.Size = new System.Drawing.Size(262, 23);
+            this.txt_Encryp_Key.TabIndex = 3;
+            this.txt_Encryp_Key.TextChanged += new System.EventHandler(this.txt_Encryp_Key_TextChanged);
             // 
-            // btn_Encrypt
+            // lbl_Encryp_Key
             // 
-            this.btn_Encrypt.Location = new System.Drawing.Point(23, 285);
-            this.btn_Encrypt.Name = "btn_Encrypt";
-            this.btn_Encrypt.Size = new System.Drawing.Size(75, 23);
-            this.btn_Encrypt.TabIndex = 6;
-            this.btn_Encrypt.Text = "Encrypt";
-            this.btn_Encrypt.UseVisualStyleBackColor = true;
-            this.btn_Encrypt.Click += new System.EventHandler(this.btn_Encrypt_Click);
+            this.lbl_Encryp_Key.AutoSize = true;
+            this.lbl_Encryp_Key.Location = new System.Drawing.Point(23, 123);
+            this.lbl_Encryp_Key.Name = "lbl_Encryp_Key";
+            this.lbl_Encryp_Key.Size = new System.Drawing.Size(144, 15);
+            this.lbl_Encryp_Key.TabIndex = 2;
+            this.lbl_Encryp_Key.Text = "Key ( 16 bit Hexadecimal )";
+            // 
+            // txt_Encryp_PlainText
+            // 
+            this.txt_Encryp_PlainText.Location = new System.Drawing.Point(23, 51);
+            this.txt_Encryp_PlainText.Name = "txt_Encryp_PlainText";
+            this.txt_Encryp_PlainText.Size = new System.Drawing.Size(262, 23);
+            this.txt_Encryp_PlainText.TabIndex = 1;
+            this.txt_Encryp_PlainText.TextChanged += new System.EventHandler(this.txt_Encryp_PlainText_TextChanged);
+            this.txt_Encryp_PlainText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Encryp_PlainText_KeyDown);
+            this.txt_Encryp_PlainText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Encryp_PlainText_KeyPress);
+            // 
+            // lbl_Encryption_PlainText
+            // 
+            this.lbl_Encryption_PlainText.AutoSize = true;
+            this.lbl_Encryption_PlainText.Location = new System.Drawing.Point(23, 33);
+            this.lbl_Encryption_PlainText.Name = "lbl_Encryption_PlainText";
+            this.lbl_Encryption_PlainText.Size = new System.Drawing.Size(171, 15);
+            this.lbl_Encryption_PlainText.TabIndex = 0;
+            this.lbl_Encryption_PlainText.Text = "Plain text (16 bit Hexadecimal )";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(55, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
             // 
             // DES_Form
             // 
