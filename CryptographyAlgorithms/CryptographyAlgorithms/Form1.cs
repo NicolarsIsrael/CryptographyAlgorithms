@@ -35,5 +35,27 @@ namespace CryptographyAlgorithms
             TrippleDES_Form trippleDesForm = new TrippleDES_Form();
             trippleDesForm.Show();
         }
+
+        private void btn_DiffielHellman_Cryptography_Click(object sender, EventArgs e)
+        {
+            DiffielHellman_Form diffielHellman_Form = new DiffielHellman_Form();
+            diffielHellman_Form.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_RSA_Crypto_Click(object sender, EventArgs e)
+        {
+            RSA_Form rsaForm = new RSA_Form();
+            rsaForm.Show();
+        }
     }
 }

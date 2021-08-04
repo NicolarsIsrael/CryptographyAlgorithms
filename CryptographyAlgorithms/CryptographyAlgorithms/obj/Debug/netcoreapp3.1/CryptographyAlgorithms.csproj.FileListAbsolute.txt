@@ -16,3 +16,5 @@ C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\Cryptog
 C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.genruntimeconfig.cache
 C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.Forms.AES_Form.resources
 C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.Forms.TrippleDES_Form.resources
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.Forms.DiffielHellman_Form.resources
+C:\Users\DELL\source\repos\CryptographyAlgorithms\CryptographyAlgorithms\CryptographyAlgorithms\obj\Debug\netcoreapp3.1\CryptographyAlgorithms.Forms.RSA_Form.resources

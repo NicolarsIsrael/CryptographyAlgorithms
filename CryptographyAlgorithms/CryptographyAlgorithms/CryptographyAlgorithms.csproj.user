@@ -10,6 +10,12 @@
     <Compile Update="Forms\DES_Form.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\DiffielHellman_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\RSA_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\TrippleDES_Form.cs">
       <SubType>Form</SubType>
     </Compile>
